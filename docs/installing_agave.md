@@ -35,7 +35,7 @@ Finally, verify that the Agave CLI has been added to the PATH by executing:
 
 The path to the Agave CLI should appear, e.g.:
 
-    /home/username/using-agave/src/agave-cli/bin/tenants-init
+```/home/username/using-agave/src/agave-cli/bin/tenants-init ```
 
 Please note that the version of the Agave CLI is 2.1.4 (2015-09-14).
 The Agave CLI is ever evolving, so please consider downloading the current source [here](https://bitbucket.org/taccaci/foundation-cli).
