@@ -7,4 +7,4 @@ Each public app is already registered with an execution system, so there is no n
 At this stage, presumably you have already formulated a scientific question independent of CyVerse and Agave. Now, you are looking for an application in the CyVerse library that can be used to address that question.
 
 
-[Back to: README](../README.md) | [Next: Creating and Submitting Jobs](creating_submitting_jobs.md)
+[Back to: README](../README.md) | [Next: Creating and Submitting a Job](creating_submitting_jobs.md)

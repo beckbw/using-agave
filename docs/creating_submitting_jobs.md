@@ -1,4 +1,4 @@
-## Create and Submit a Job
+## Creating and Submitting a Job
 
 The CyVerse catalog has hundreds of public applications that are available to run right now.
 Each public app is already registered with an execution system, so there is no need to go through the process of creating your own execution system.
