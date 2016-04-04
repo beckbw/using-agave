@@ -11,7 +11,7 @@ To begin, please visit the following links:
 * [Intial Assumptions](docs/initial_assumptions.md)
 * [Installing the Agave CLI](docs/installing_agave.md)
 * [Initializing with CyVerse](docs/initializing.md)
-* [Uploading and Downloading Data](docs/data_transfer.md)
+* [Data Management](docs/data_management.md)
 * [Searching for an Application](docs/searching_apps.md)
 * Ex 1: Genotyping
 * Ex 2: Assembly

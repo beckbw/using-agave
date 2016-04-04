@@ -1,4 +1,4 @@
-## Uploading and Downloading Data
+## Data Management
 
 Before running an application, it is important to understand how data flows in and out of CyVerse with the Agave CLI.
 As a CyVerse user, you are able to store data in the central data store called **data.iplantcollaborative.org**.
