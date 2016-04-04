@@ -1,4 +1,4 @@
-## Using the Agave CLI Effectively within the CyVerse Cyberinfrastructure
+## Using the Agave CLI within the CyVerse Cyberinfrastructure
 
 [CyVerse](http://www.cyverse.org/) is a multi-site organization with the mission to design, deploy, and expand a national cyberinfrastructure for life sciences research.
 The national cyberinfrastructure includes data storage facilities, a cloud infrastructure for high performance computing, authentication and security services, and education and training resources.
