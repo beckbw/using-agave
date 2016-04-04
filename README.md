@@ -1,24 +1,23 @@
-## Using CyVerse via the Agave Command Line Interface
+## Accessing CyVerse via the Agave Command Line Interface
 
-CyVerse is an organization with the mission to design, deploy and expand a national cyberinfrastructure for life science research.
+[CyVerse](http://www.cyverse.org/) is a multi-site organization with the mission to design, deploy and expand a national cyberinfrastructure for life sciences research.
+The national cyberinfrastructure includes data storage facilities, a cloud infrastructure for high performance computing, authentication and security services, and education and training resources.
 It provides access to that cyberinfrastructure through multiple application programming interfaces (APIs) and web portals.
-One method of access to a large library of applications, compute, and storage resources is via the Agave command line interface (CLI).
+One such method of access is via the [Agave](http://agaveapi.co/) command line interface (CLI).
 
-The objective of this tutorial is to demonstrate to the end user how to use the Agave CLI to take advantage of the CyVerse cyberinfrastructure.
+The objective of this tutorial is to demonstrate how to use the Agave CLI to efficiently take advantage of the CyVerse cyberinfrastructure.
 To begin, please visit the following links:
 
- *Intial Assumptions
- *Installing the Agave CLI
- *Initializing with the CyVerse
- *Uploading and downloading data
+* [Intial Assumptions](docs/initial_assumptions.md)
+* [Installing the Agave CLI](docs/installing_agave.md)
+* [Initializing with CyVerse](docs/initializing.md)
+* [Uploading and Downloading Data](docs/data_transfer.md)
+* [Searching for an Application](docs/searching_apps.md)
+* Ex 1: Genotyping
+* Ex 2: Assembly
+* Ex 3: Data Sharing
+* Ex 4: Automation
 
-
-
-If you are interested in developing your own application bundles, please visit the [CyVerse SDK](https://github.com/iPlantCollaborativeOpenSource/cyverse-sdk).
-
-
-How can the CLI make one of CyVerse's bioinformatics analyst stakeholders more productive?
-
-Potential use cases: Genotyping, Assembly, Data Sharing, Automation using events, etc.
+If you are interested in learning to develop your own application bundles, please visit the [CyVerse SDK](https://github.com/iPlantCollaborativeOpenSource/cyverse-sdk).
 
 
