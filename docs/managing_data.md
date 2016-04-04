@@ -1,4 +1,4 @@
-## Data Management
+## Managing Data
 
 Before running an application, it is important to understand how data flows in and out of CyVerse with the Agave CLI.
 As a CyVerse user, you are able to store data in the central data store called **data.iplantcollaborative.org**.
@@ -65,5 +65,6 @@ cat new-file.txt
 
 This concludes the overview of how to manage data on the data storage system.
 At any time, you can issue an Agave command with the `-h` flag to find more information on the function and usage of the command.
+Some advanced file operations will be demonstrated in the second half of this tutorial.
 
 [Back to: README](../README.md) | [Next: Searching for an Application](searching_apps.md)

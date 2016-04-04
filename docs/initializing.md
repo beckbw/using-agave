@@ -7,7 +7,7 @@ On the command line, type:
 ```tenants-init -t iplantc.org```
 
 (CyVerse was formerly called "iPlant").
-This defines a URL where the Agave CLI will direct its cURL commands (POST, GET, PUT, DELETE).
+This defines the URL where the Agave CLI will direct its cURL commands (POST, GET, PUT, DELETE).
 Now, a "client" that will store your username and information about the method of interaction with the tenant must be registered:
 
 ```clients-create -S -N my_client -D "My client used for interacting with CyVerse"```
@@ -49,4 +49,4 @@ If it is expired, refresh the token using:
 
 You are now fully configured to interact with CyVerse via the Agave CLI.
 
-[Back to: README](../README.md) | [Next: Data Management](data_management.md)
+[Back to: README](../README.md) | [Next: Managing Data](managing_data.md)

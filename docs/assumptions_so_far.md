@@ -7,6 +7,8 @@ To continue on to the second half of the tutorial, we assume the following:
 * You understand how to manage data in the central CyVerse (formerly iPlant) data store: data.iplantcollaborative.org
 * You have Identified the appropriate application to answer your scientific question
 
-If you are using a tenant or storage system other than those described in this tutorial, the same steps described here may still apply, but please proceed carefully.
+And, the [Initial Assumptions](initial_assumptions.md) still apply.
+
+If you are using a tenant or storage system other than those described in this tutorial, the same steps covered here may still apply, but please proceed carefully.
 
 [Back to: README](../README.md) | [Next: Importing Data from Other Systems or the Web](importing_data.md)
