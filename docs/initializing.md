@@ -41,12 +41,12 @@ As such, the above three command (`tenants-init`, `clients-create`, `auth-tokens
 However, for security reasons, the  authentication token expires after four hours.
 To check the status of the token, issue:
 
-```auth-check```
+```auth-check ```
 
 If it is expired, refresh the token using:
 
-```auth-tokens-refresh```
+```auth-tokens-refresh ```
 
-Now you are fully configured to interact with CyVerse via the Agave CLI.
+You are now fully configured to interact with CyVerse via the Agave CLI.
 
 [Back to: README](../README) | [Next: Uploading and Downloading Data](data_transfer.md)
