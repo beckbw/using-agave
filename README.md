@@ -5,16 +5,16 @@ The national cyberinfrastructure includes data storage facilities, a cloud infra
 It provides access to that cyberinfrastructure through multiple application programming interfaces (APIs) and web portals.
 One such method of access is via the [Agave](http://agaveapi.co/) command line interface (CLI).
 
-The objective of this tutorial is to demonstrate how to use the Agave CLI to effectively take advantage of the CyVerse cyberinfrastructure.
+The objective of this tutorial is to demonstrate how to effectively use the Agave CLI to take advantage of the CyVerse cyberinfrastructure.
 It is divided into two parts.
-The first part is an introductory-level demonstration of how to start using Agave and configure your environment to interact with the CyVerse cyberinfrastructure:
+The first part is an introductory-level demonstration of how to configure your environment to interact with the CyVerse cyberinfrastructure, and how to perform some basic Agave functions:
 
 * [Intial Assumptions](docs/initial_assumptions.md)
 * [Installing the Agave CLI](docs/installing_agave.md)
 * [Initializing with CyVerse](docs/initializing.md)
 * [Managing Data](docs/managing_data.md)
 * [Searching for an Application](docs/searching_apps.md)
-* [Creating and Submitting a Job](creating_submitting_job.md)
+* [Creating and Submitting a Job](creating_submitting_jobs.md)
 
 The second part is an intermediate-level demonstration of the effective application of the Agave CLI towards a few different end-use cases. If you are already familiar with the Agave CLI, you may want to start here:
 
