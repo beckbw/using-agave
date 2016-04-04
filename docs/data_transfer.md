@@ -3,4 +3,4 @@
 
 
 
-[Back to: README](../README) | [Next: Searching for an Application](searching_apps.md)
+[Back to: README](../README.md) | [Next: Searching for an Application](searching_apps.md)

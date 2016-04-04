@@ -40,4 +40,4 @@ The path to the Agave CLI should appear, e.g.:
 Please note that the version of the Agave CLI is 2.1.4 (2015-09-14).
 The Agave CLI is ever evolving, so please consider downloading the current source [here](https://bitbucket.org/taccaci/foundation-cli).
 
-[Back to: README](../README) | [Next: Initializing with CyVerse](initializing.md)
+[Back to: README](../README.md) | [Next: Initializing with CyVerse](initializing.md)

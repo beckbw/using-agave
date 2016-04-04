@@ -49,4 +49,4 @@ If it is expired, refresh the token using:
 
 You are now fully configured to interact with CyVerse via the Agave CLI.
 
-[Back to: README](../README) | [Next: Uploading and Downloading Data](data_transfer.md)
+[Back to: README](../README.md) | [Next: Uploading and Downloading Data](data_transfer.md)

@@ -7,4 +7,4 @@ To complete this tutorial, we assume the following:
 * You have Git, cURL, and Bash installed
 * You are comfortable editing text files and working at the command line
 
-[Back to: README](../README) | [Next: Installing the Agave CLI](installing_agave.md)
+[Back to: README](../README.md) | [Next: Installing the Agave CLI](installing_agave.md)

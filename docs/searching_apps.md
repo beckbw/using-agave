@@ -1,5 +1,5 @@
 ## Searching for an Application
 
 
-[Back to: README](../README) | Next: Example 1: Genotyping
+[Back to: README](../README.md) | Next: Example 1: Genotyping
 
