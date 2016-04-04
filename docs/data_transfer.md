@@ -41,8 +41,8 @@ files-list -L username/
 Many common file-related commands have an analogous command in the Agave CLI:
 
 ```
-files-copy -D wallen/new-file-copy.txt wallen/new-file.txt
-files-move -D wallen/new-folder/new-file-copy.txt wallen/new-file-copy.txt
+files-copy -D username/new-file-copy.txt username/new-file.txt
+files-move -D username/new-folder/new-file-copy.txt username/new-file-copy.txt
 files-list -L username/
 files-list -L username/new-folder/
 ```
@@ -50,9 +50,9 @@ files-list -L username/new-folder/
 Files and folders can be deleted, but be cautious because there is no way to recover:
 
 ```
-files-delete wallen/new-folder/new-file-copy.txt
-files-delete wallen/new-folder/
-files-list -L wallen/
+files-delete username/new-folder/new-file-copy.txt
+files-delete username/new-folder/
+files-list -L username/
 ```
 
 First delete the local copy of `new-file.txt`, then download the remote copy with the `files-get` command:
