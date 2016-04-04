@@ -12,18 +12,18 @@ Now, a "client" that will store your username and information about the method o
 
 ```clients-create -S -N my_client -D "My client used for interacting with CyVerse"```
 
+The `-S` flag stores your API keys on your local system so that you do not need to repeat this step.
+The `-N` flag is a name for the client, and the `-D` flag is a brief description.
 You will be prompted for a username and password, at which point you should enter your CyVerse credentials.
 If everything is successful, you will see a message similar to:
 
-```Successfully created client my_client
+```
+Successfully created client my_client
 key: g1of3MXVsJkk0avI5QrOopoa 
-secret: JILflDQpSsEIGQyDKWGEe9Ia```
+secret: JILflDQpSsEIGQyDKWGEe9Ia
+```
 
-The `-S` flag stores your API keys on your local system so that you do not need to repeat this step.
-The `-N` flag is a name for the client, and the `-D` flag is a brief description.
-If for some reason you ever need to find and delete existing clients, you can use the `clients-list` and `clients-delete` commands.
-
-Finally, obtain an OAuth 2 authentication token by issuing the following command:
+If for some reason you ever need to find and delete existing clients, you can use the `clients-list` and `clients-delete` commands. Finally, obtain an OAuth 2 authentication token by issuing the following command:
 
 ```auth-tokens-create -S```
 
@@ -31,11 +31,13 @@ The `-S` flag will store the token on your local system.
 Because you previously stored your username, you should now just be prompted for your CyVerse password.
 If successful, you will see a message similar to:
 
-```Token for iplantc.org:username successfully refreshed and cached for 14400 seconds
-78a89c1c576e3f36311a3064992```
+```
+Token for iplantc.org:username successfully refreshed and cached for 14400 seconds
+78a89c1c576e3f36311a3064992
+```
 
 This will make it so you do not have to enter your username and password every time you want to interact with CyVerse via the Agave CLI.
-As such, the above three command (`tenants-init`, `clients-create`, `auth-tokens-create`) are _one time_ actions.
+As such, the above three command (`tenants-init`, `clients-create`, `auth-tokens-create`) are *one time* actions.
 However, for security reasons, the  authentication token expires after four hours.
 To check the status of the token, issue:
 
