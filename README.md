@@ -16,7 +16,7 @@ The first part is an introductory-level demonstration of how to configure your e
 * [Searching for an Application](docs/searching_apps.md)
 * [Creating and Submitting a Job](docs/creating_submitting_jobs.md)
 
-The second part is an intermediate-level demonstration of the effective application of the Agave CLI towards a few different end-use cases. If you are already familiar with the Agave CLI, you may want to start here:
+The second part is an intermediate-level demonstration of the application of the Agave CLI towards a few different end-use cases. If you are already familiar with the Agave CLI, you may want to start here:
 
 * [Assumptions So Far](docs/assumptions_so_far.md)
 * [Importing Data from Other Systems or the Web](docs/importing_data.md)
