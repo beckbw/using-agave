@@ -9,8 +9,8 @@ Upload that sample file to the CyVerse data store by first navigating to the `us
 
 ```
 cd /path/to/using-agave
-files-upload -F src/sequence12.fasta wallen/
-files-list -L wallen/
+files-upload -F src/sequence12.fasta username/
+files-list -L username/
 ```
 
 This example fasta file is courtesy of the ClustalW2 developers, and can be found [here](http://www.ebi.ac.uk/Tools/msa/clustalw2/help/faq.html#11).
@@ -71,7 +71,7 @@ Use the `agave://` prefix to give a full description of the location of your sta
 
 ```
   "inputs": {
-    "inputFasta": "agave://data.iplantcollaborative.org/wallen/sequence12.fasta"
+    "inputFasta": "agave://data.iplantcollaborative.org/username/sequence12.fasta"
   },
 ```
 
@@ -85,7 +85,9 @@ You can monitor the progress of the jobs-list command:
 
 Once complete, get the output:
 
-```jobs-output-list ```
-```jobs-output-get ```
+```
+jobs-output-list 
+jobs-output-get 
+```
 
 [Back to: README](../README.md)
