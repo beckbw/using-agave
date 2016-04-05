@@ -21,7 +21,7 @@ Clustalw-2.1.0u1
 Two copies of Clustalw version 2.1.0 are available.
 To examine the later revision of the application (u2) in more detail, issue:
 
-``apps-list -V Clustalw-2.1.0u2```
+```apps-list -V Clustalw-2.1.0u2```
 
 The output of `apps-list` is a `json` description of the program including metadata, inputs, parameters, and outputs.
 For example, the `metadata` includes the following:
