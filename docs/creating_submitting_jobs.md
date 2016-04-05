@@ -1,6 +1,6 @@
 ## Creating and Submitting a Job
 
-Continuing from the previous example of Clustalw, we know that the only input required is a single fasta file:
+Continuing from the previous example of ClustalW, we know that the only input required is a single fasta file:
 
 ```"(non-aligned) FASTA sequences to be aligned"```
 
@@ -79,7 +79,7 @@ Use the `agave://` prefix to give a full description of the location of your sta
 
 ```jobs-submit -F Clustalw-job.json```
 
-Hopefully you will see a success message upon submission.
+If there are no errors, you will see a success message upon submission.
 This indicates that the application, data, and any other instructions you provide have been bundled and sent to the execution system for processing.
 You can monitor the progress of the jobs-list command, with or without the job id:
 

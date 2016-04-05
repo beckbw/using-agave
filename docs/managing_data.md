@@ -21,7 +21,7 @@ To see a Linux-style long listing of what is currently available in your home di
 
 Where `username` is replaced with your CyVerse username.
 If this is your first time interacting with the iPlant data store, then your home directory may still be empty.
-You can create a new folder in your home directory, then list the contents of that folder (empty for now) by typing:
+Create a new folder in your home directory, then list the contents of that folder (empty for now) by typing:
 
 ```
 files-mkdir -N new-folder username/
@@ -65,6 +65,6 @@ cat new-file.txt
 
 This concludes the overview of how to manage data on the data storage system.
 At any time, you can issue an Agave command with the `-h` flag to find more information on the function and usage of the command.
-Some advanced file operations will be demonstrated in the second half of this tutorial.
+Some advanced file operations will be demonstrated in the second part of this tutorial.
 
 [Back to: README](../README.md) | [Next: Searching for an Application](searching_apps.md)

@@ -6,10 +6,13 @@ Thus, there is no need at this time to create your own execution system.
 (Please see the [Cyverse SDK tutorial](https://github.com/iPlantCollaborativeOpenSource/cyverse-sdk) if you are interested in creating your own personal copies of applications and execution systems.)
 
 At this stage, presumably you have already formulated a scientific objective independent of CyVerse and Agave.
-For example, your objective may be to perform a multiple sequence alignment with Clustalw.
-Use the `apps-search` command to see if the Clustalw application is available in the CyVerse library: 
+For example, your objective may be to **perform a multiple sequence alignment with ClustalW**.
+Use the `apps-search` command to see if the ClustalW application is available in the CyVerse library: 
 
-```apps-search public=true name.like=*Clustalw*```
+```
+apps-search -h
+apps-search public=true name.like=*Clustalw*
+```
 
 The output of this command lists two possible matches:
 
@@ -18,7 +21,7 @@ Clustalw-2.1.0u2
 Clustalw-2.1.0u1
 ```
 
-Two copies of Clustalw version 2.1.0 are available.
+Two copies of ClustalW version 2.1.0 are available.
 To examine the later revision of the application (u2) in more detail, issue:
 
 ```apps-list -V Clustalw-2.1.0u2```
