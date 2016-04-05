@@ -4,6 +4,17 @@ Continuing from the previous example of Clustalw, we know that the input that is
 
 ```"(non-aligned) FASTA sequences to be aligned"```
 
+A sample non-aligned FASTA file has been included with this repository.
+Upload that sample file to the CyVerse data store by first navigating to the `using-agave/` directory, then by issuing:
+
+```
+cd /path/to/using-agave
+files-upload -F src/sequence12.fasta wallen/
+files-list -L wallen/
+```
+
+This example fasta file is courtesy of the ClustalW2 developers, and can be found [here](http://www.ebi.ac.uk/Tools/msa/clustalw2/help/faq.html#11).
+
 The `jobs-template` command is used to help assemble a job script:
 
 ```jobs-template -A Clustalw-2.1.0u2 >> Clustalw-job.json```
@@ -42,12 +53,12 @@ Open up the resulting file, `Clustalw-job.json`, in a Linux text editor such as 
       "persistent":true
     },
     {
-      "url":"wallen@tacc.utexas.edu",
+      "url":"username@tacc.utexas.edu",
       "event":"FINISHED",
       "persistent":false
     },
     {
-      "url":"wallen@tacc.utexas.edu",
+      "url":"username@tacc.utexas.edu",
       "event":"FAILED",
       "persistent":false
     }
@@ -55,16 +66,12 @@ Open up the resulting file, `Clustalw-job.json`, in a Linux text editor such as 
 }
 ```
 
-As we know, the only input required is a Fasta file.
-First upload a fasta file to the iPlant data store:
-
-```files-upload -F multi.fa wallen/```
-
-Then add the path to the file into the job template:
+The important line to edit here is the line pointing to the location of the fasta file.
+Use the `agave://` prefix to give a full description of the location of your staged data:
 
 ```
   "inputs": {
-    "inputFasta": "agave://data.iplantcollaborative.org/wallen/multi.fa"
+    "inputFasta": "agave://data.iplantcollaborative.org/wallen/sequence12.fasta"
   },
 ```
 
