@@ -23,9 +23,9 @@ __Part 2__
 * [Assumptions So Far](docs/assumptions_so_far.md)
 * [Importing Data from Other Systems or the Web](docs/importing_data.md)
 * [Sharing Data with Other Users](docs/sharing_data.md)
-* Automation
-* Ex 1: Genotyping
-* Ex 2: Assembly
+* Automating Tasks
+* Ex 1: Running the Drug Discovery Portal from the Command Line
+* Ex 2: Genotyping and Assemble in DNA Subway
 
 If you are interested in learning to develop your own application bundles, please visit the [CyVerse SDK](https://github.com/iPlantCollaborativeOpenSource/cyverse-sdk).
 
