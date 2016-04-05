@@ -35,4 +35,4 @@ Now, a user with CyVerse username `my_collaborator` has permissions to access th
 Valid values for setting permission with the `-P` flag are READ, WRITE, EXECUTE, READ_WRITE, READ_EXECUTE, WRITE_EXECUTE, ALL, and NONE.
 This same action can be performed recursively on directories using the `-R` flag.
 
-[Back to: README](../README.md) | Next: Automation
+[Back to: README](../README.md) | [Next: Automating Tasks](automating_tasks.md)

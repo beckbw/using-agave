@@ -25,7 +25,7 @@ __Part 2__
 * [Sharing Data with Other Users](docs/sharing_data.md)
 * Automating Tasks
 * Ex 1: Running the Drug Discovery Portal from the Command Line
-* Ex 2: Genotyping and Assemble in DNA Subway
+* Ex 2: Assembly and Genotyping with DNA Subway
 
 If you are interested in learning to develop your own application bundles, please visit the [CyVerse SDK](https://github.com/iPlantCollaborativeOpenSource/cyverse-sdk).
 
