@@ -1,10 +1,6 @@
 ## Creating and Submitting a Job
 
-Continuing from the previous example of ClustalW, we know that the only input required is a single fasta file:
-
-```"(non-aligned) FASTA sequences to be aligned"```
-
-An example, non-aligned FASTA file, courtesy of the [ClustalW2 developers](http://www.ebi.ac.uk/Tools/msa/clustalw2/help/faq.html#11),  has been included with this repository.
+Continuing from the previous example of ClustalW, we know that the only input taken is a single fasta file. An example, non-aligned FASTA file, courtesy of the [ClustalW developers](http://www.ebi.ac.uk/Tools/msa/clustalw2/help/faq.html#11),  has been included with this repository.
 Upload that sample file to the CyVerse data store by first navigating to the `using-agave/` directory, then by issuing:
 
 ```
@@ -85,7 +81,7 @@ You can monitor the progress of the jobs-list command, with or without the job i
 
 ```
 jobs-list
-jobs-list -V 658585977227923941-242ac114-0001-007
+jobs-list -v 658585977227923941-242ac114-0001-007
 ```
 
 Once the job status is `FINISHED`, you can list what output is available:
@@ -111,5 +107,7 @@ Download a single file, or download the whole directory to your local machine wi
 jobs-output-get 658585977227923941-242ac114-0001-007 clustalw2.aln
 jobs-output-get -r 658585977227923941-242ac114-0001-007
 ```
+
+Congratulations! You have successfully completed a job within the CyVerse cyberinfrastructure using the Agave CLI.
 
 [Back to: README](../README.md)
