@@ -18,16 +18,16 @@ username READ WRITE EXECUTE
 
 Where `username` refers to your CyVerse username.
 The Agave CLI has a nice set of tools that can be used to find other users.
-View your own userprofile by issuing:
+View your own user profile by issuing:
 
 ```profiles-list -v me```
 
 You can search for your colleagues either by name (`-N`), e-mail address (`-E`), or username (`-U`), provided they have credentials with the same tenant:
 
 ```
-profiles-list -v -N "John Doe"
-profiles-list -v -E "john.doe@agave.com
-profiles-list -v -U jdoe
+profiles-list -v -N "My Collaborator"
+profiles-list -v -E "my_collaborator@agave.com"
+profiles-list -v -U my_collaborator
 ```
 
 Once the username of the target person is known, permissions can be updated by performing the following:
