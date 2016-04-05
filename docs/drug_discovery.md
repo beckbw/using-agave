@@ -34,7 +34,7 @@ FInd out more information about the application with:
 
 A close read of this information indicates that, as input, a `proteinFile` is required in format `pdb` or `pdbqt`.
 The user can also provide `ligandFiles`, but they are not required: `"required": false`.
-Many parameters are required for this application, including `sizeX`, `sizeY`, `sizeZ`, `centerX`, `centerY`, `centerZ`, `paramFile` (optional), and`ligandIndices` (optional). To begin to organize all this data into a json-format job script, use the `jobs-template` command:
+Many parameters are required for this application, including `sizeX`, `sizeY`, `sizeZ`, `centerX`, `centerY`, `centerZ`, `paramFile` (optional), and `ligandIndices` (optional). To begin to organize all this data into a json-format job script, use the `jobs-template` command:
 
 ```jobs-template -N DDP_Job_from_CLI -A vina-lonestar-1.1.2u4 >> vina-job.json```
 
