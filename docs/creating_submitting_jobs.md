@@ -88,11 +88,28 @@ jobs-list
 jobs-list -V 658585977227923941-242ac114-0001-007
 ```
 
-Once complete, you can see what output is available, then download it to your local system:
+Once the job status is `FINISHED`, you can list what output is available:
+
+```jobs-output-list 658585977227923941-242ac114-0001-007```
+
+Which should result in:
 
 ```
-jobs-output-list -L 658585977227923941-242ac114-0001-007
-jobs-output-get -r 658585977227923941-242ac114-0001-007 
+clustalw2.79585.err
+clustalw2.aln
+clustalw-test-1459832693-658585977227923941-242ac114-0001-007.err
+clustalw-test-1459832693-658585977227923941-242ac114-0001-007.out
+sequence12.dnd
+sequence12.fasta
+```
+
+The important output here is the `clustalw2.aln` file which contains the aligned sequences.
+The `.err` or `.out` files also may contain important information if there were any errors during the job.
+Download a single file, or download the whole directory to your local machine with:
+
+```
+jobs-output-get 658585977227923941-242ac114-0001-007 clustalw2.aln
+jobs-output-get -r 658585977227923941-242ac114-0001-007
 ```
 
 [Back to: README](../README.md)
