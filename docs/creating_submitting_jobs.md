@@ -1,10 +1,10 @@
 ## Creating and Submitting a Job
 
-Continuing from the previous example of Clustalw, we know that the input that is required is a single input fasta file:
+Continuing from the previous example of Clustalw, we know that the only input required is a single fasta file:
 
 ```"(non-aligned) FASTA sequences to be aligned"```
 
-A sample non-aligned FASTA file has been included with this repository.
+An example, non-aligned FASTA file, courtesy of the [ClustalW2 developers](http://www.ebi.ac.uk/Tools/msa/clustalw2/help/faq.html#11),  has been included with this repository.
 Upload that sample file to the CyVerse data store by first navigating to the `using-agave/` directory, then by issuing:
 
 ```
@@ -13,9 +13,9 @@ files-upload -F src/sequence12.fasta username/
 files-list -L username/
 ```
 
-This example fasta file is courtesy of the ClustalW2 developers, and can be found [here](http://www.ebi.ac.uk/Tools/msa/clustalw2/help/faq.html#11).
-
-The `jobs-template` command is used to help assemble a job script:
+(Please replace `username` with your CyVerse username).
+The only other thing needed is a job script that describes the application you intend to run, the system on which the job will be executed, the location of the input data, and any other necessary parameters.
+The `jobs-template` command is used to help assemble a job script specific to an application:
 
 ```jobs-template -A Clustalw-2.1.0u2 >> Clustalw-job.json```
 
@@ -66,7 +66,7 @@ Open up the resulting file, `Clustalw-job.json`, in a Linux text editor such as 
 }
 ```
 
-The important line to edit here is the line pointing to the location of the fasta file.
+The important part to edit here is lines 13-15, which point to the location of the fasta file.
 Use the `agave://` prefix to give a full description of the location of your staged data:
 
 ```
@@ -75,19 +75,24 @@ Use the `agave://` prefix to give a full description of the location of your sta
   },
 ```
 
-Finally, submit the job by issuing:
+(Please replace `username` with your CyVerse username). Finally, submit the job by issuing:
 
 ```jobs-submit -F Clustalw-job.json```
 
-You can monitor the progress of the jobs-list command:
-
-```jobs-list ```
-
-Once complete, get the output:
+Hopefully you will see a success message upon submission.
+This indicates that the application, data, and any other instructions you provide have been bundled and sent to the execution system for processing.
+You can monitor the progress of the jobs-list command, with or without the job id:
 
 ```
-jobs-output-list 
-jobs-output-get 
+jobs-list
+jobs-list -V 658585977227923941-242ac114-0001-007
+```
+
+Once complete, you can see what output is available, then download it to your local system:
+
+```
+jobs-output-list -L 658585977227923941-242ac114-0001-007
+jobs-output-get -r 658585977227923941-242ac114-0001-007 
 ```
 
 [Back to: README](../README.md)
