@@ -109,5 +109,6 @@ The `inputs` section of the app contains the following:
 It appears that only one input is required: a fasta file.
 According to the description, it should be a "(non-aligned) FASTA sequences to be aligned."
 
-Once the appropriate application has been identified, then the next step is to create a job template and submit a job.
+Once the appropriate application has been identified, then the next step is to stage the necessary data, create a job template, and submit the job.
+
 [Back to: README](../README.md) | [Next: Creating and Submitting a Job](creating_submitting_jobs.md)
