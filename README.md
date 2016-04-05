@@ -9,6 +9,7 @@ The objective of this tutorial is to demonstrate how to effectively use the Agav
 It is divided into two parts.
 The first part is an introductory-level demonstration of how to configure your command line environment to interact with the CyVerse cyberinfrastructure, and how to perform some basic Agave functions:
 
+__Part 1__
 * [Intial Assumptions](docs/initial_assumptions.md)
 * [Installing the Agave CLI](docs/installing_agave.md)
 * [Initializing with CyVerse](docs/initializing.md)
@@ -18,6 +19,7 @@ The first part is an introductory-level demonstration of how to configure your c
 
 The second part is an intermediate-level demonstration of the application of the Agave CLI towards a few different end-use cases. If you are already familiar with the basics of the Agave CLI, you may want to start here:
 
+__Part 2__
 * [Assumptions So Far](docs/assumptions_so_far.md)
 * [Importing Data from Other Systems or the Web](docs/importing_data.md)
 * [Sharing Data with Other Users](docs/sharing_data.md)
