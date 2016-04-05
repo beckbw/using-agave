@@ -1,10 +1,84 @@
 ## Creating and Submitting a Job
 
-The CyVerse catalog has hundreds of public applications that are available to run right now.
-Each public app is already registered with an execution system, so there is no need to go through the process of creating your own execution system.
-(Please see [this tutorial](https://github.com/iPlantCollaborativeOpenSource/cyverse-sdk) if you are interested in creating your own personal copies of apps and execution systems.)
+Continuing from the previous example of Clustalw, we know that the input that is required is a single input fasta file:
 
-At this stage, presumably you have already formulated a scientific question independent of CyVerse and Agave. Now, you are looking for an application in the CyVerse library that can be used to address that question.
+```"(non-aligned) FASTA sequences to be aligned"```
 
+The `jobs-template` command is used to help assemble a job script:
+
+```jobs-template -A Clustalw-2.1.0u2 >> Clustalw-job.json```
+
+The `-A` flag indicates to use all fields in the json job template file.
+Open up the resulting file, `Clustalw-job.json`, in a Linux text editor such as VIM.
+
+```vim Clustalw-job.json```
+
+```
+{
+  "name":"Clustalw test-1459832693",
+  "appId": "Clustalw-2.1.0u2",
+  "batchQueue": "normal",
+  "executionSystem": "stampede.tacc.utexas.edu",
+  "maxRunTime": "23:56:00",
+  "memoryPerNode": "32GB",
+  "nodeCount": 1,
+  "processorsPerNode": 16,
+  "archive": true,
+  "archiveSystem": "data.iplantcollaborative.org",
+  "archivePath": null,
+  "inputs": {
+    "inputFasta": ""
+  },
+  "parameters": {
+    "format": "CLUSTAL",
+    "T": "DNA",
+    "outname": "clustalw2.aln",
+    "arguments": ""
+  },
+  "notifications": [
+    {
+      "url":"http://requestbin.agaveapi.co/1i1th851?job_id=${JOB_ID}&status=${JOB_STATUS}",
+      "event":"*",
+      "persistent":true
+    },
+    {
+      "url":"wallen@tacc.utexas.edu",
+      "event":"FINISHED",
+      "persistent":false
+    },
+    {
+      "url":"wallen@tacc.utexas.edu",
+      "event":"FAILED",
+      "persistent":false
+    }
+  ]
+}
+```
+
+As we know, the only input required is a Fasta file.
+First upload a fasta file to the iPlant data store:
+
+```files-upload -F multi.fa wallen/```
+
+Then add the path to the file into the job template:
+
+```
+  "inputs": {
+    "inputFasta": "agave://data.iplantcollaborative.org/wallen/multi.fa"
+  },
+```
+
+Finally, submit the job by issuing:
+
+```jobs-submit -F Clustalw-job.json```
+
+You can monitor the progress of the jobs-list command:
+
+```jobs-list ```
+
+Once complete, get the output:
+
+```jobs-output-list ```
+```jobs-output-get ```
 
 [Back to: README](../README.md)
