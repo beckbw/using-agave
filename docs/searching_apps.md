@@ -1,18 +1,17 @@
 ## Searching for an Application
 
 The CyVerse catalog has hundreds of public applications that are available to run right now.
-Each application is already registered to a compute resource, called an execution system, where the job will run.
+Each application is already registered to a compute resource, called an **execution system**, where the task will run.
 Thus, there is no need at this time to create your own execution system.
-(Please see the [Cyverse SDK tutorial](https://github.com/iPlantCollaborativeOpenSource/cyverse-sdk) if you are interested in creating your own personal copies of apps and execution systems.)
+(Please see the [Cyverse SDK tutorial](https://github.com/iPlantCollaborativeOpenSource/cyverse-sdk) if you are interested in creating your own personal copies of applications and execution systems.)
 
-At this stage, presumably you have already formulated a scientific question independent of CyVerse and Agave.
-Now, you are looking for an application in the CyVerse library that can be used to address that question.
+At this stage, presumably you have already formulated a scientific objective independent of CyVerse and Agave.
 For example, your objective may be to perform a multiple sequence alignment with Clustalw.
-First check if the Clustalw application is available: 
+Use the `apps-search` command to see if the Clustalw application is available in the CyVerse library: 
 
 ```apps-search public=true name.like=*Clustalw*```
 
-The output looks like:
+The output of this command lists two possible matches:
 
 ```
 Clustalw-2.1.0u2
@@ -20,14 +19,14 @@ Clustalw-2.1.0u1
 ```
 
 Two copies of Clustalw version 2.1.0 are available.
-To examine the later revision (u2) in more detail, issue:
+To examine the later revision of the application (u2) in more detail, issue:
 
 ``apps-list -V Clustalw-2.1.0u2```
 
-The output is a `json` description of the program including metadata, inputs, parameters, and outputs.
-The `metadata` includes the following:
+The output of `apps-list` is a `json` description of the program including metadata, inputs, parameters, and outputs.
+For example, the `metadata` includes the following:
 
-```
+```json
 "id" : "Clustalw-2.1.0u2",
 "name" : "Clustalw",
 "icon" : null,
@@ -70,10 +69,11 @@ The `metadata` includes the following:
 "available" : true
 ```
 
-From this description, we can see thet the app will run on the stampede supercomputer.
+From this description, you may see the name of the application, that the application runs in serial with 32 GB of RAM, and that the calculation will be performed on the Stampede supercomputer, among other details.
 
 The `inputs` section of the app contains the following:
-```
+
+```json
 "inputs" : [
   {
     "id" : "inputFasta",
@@ -103,7 +103,7 @@ The `inputs` section of the app contains the following:
       ]
     }
   }
-],
+]
 ```
 
 It appears that only one input is required: a fasta file.
