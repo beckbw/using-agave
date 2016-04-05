@@ -3,7 +3,7 @@
 The CyVerse catalog has hundreds of public applications that are available to run right now.
 Each application is already registered to a compute resource, called an **execution system**, where the task will run.
 Thus, there is no need at this time to create your own execution system.
-(Please see the [Cyverse SDK tutorial](https://github.com/iPlantCollaborativeOpenSource/cyverse-sdk) if you are interested in creating your own personal copies of applications and execution systems.)
+(Please see the [Cyverse SDK](https://github.com/iPlantCollaborativeOpenSource/cyverse-sdk) if you are interested in creating your own personal copies of applications and execution systems.)
 
 At this stage, presumably you have already formulated a scientific objective independent of CyVerse and Agave.
 For example, your objective may be to **perform a multiple sequence alignment with ClustalW**.
@@ -72,7 +72,7 @@ For example, the `metadata` includes the following:
 "available" : true
 ```
 
-From this description, you may see the name of the application, that the application runs in serial with 32 GB of RAM, and that the calculation will be performed on the Stampede supercomputer, among other details.
+From this description, you can see the name of the application, a short description, that the application runs in serial with 32 GB of RAM, and that the application is configured to send calculations to the [Stampede](https://www.tacc.utexas.edu/stampede/) supercomputer, among other details.
 
 The `inputs` section of the app contains the following:
 
@@ -109,9 +109,9 @@ The `inputs` section of the app contains the following:
 ]
 ```
 
-It appears that only one input is required: a fasta file.
+It appears that only one input is taken: a fasta file.
 According to the description, it should be a "(non-aligned) FASTA sequences to be aligned."
 
-Once the appropriate application has been identified, then the next step is to stage the necessary data, create a job template, and submit the job.
+Once the appropriate application has been identified, then the next steps are to stage the necessary data, create a job template, and submit the job.
 
 [Back to: README](../README.md) | [Next: Creating and Submitting a Job](creating_submitting_jobs.md)
