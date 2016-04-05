@@ -1,7 +1,7 @@
 ## Sharing Data with Other Users
 
-Using the CyVerse central data store (data.iplantcollaborative.org), it is possible to share data with others users.
-To demonstrate sharing data, we will use the `seqence12.fasta` file uploaded previously in this tutorial.
+Using Agave storage systems, such as the CyVerse central data store (data.iplantcollaborative.org), it is possible to share data with others users.
+As a data sharing demonstration, we will use the `seqence12.fasta` file uploaded previously in this tutorial.
 If you do not have that file, either [upload it now](managing_data.md), or work with a file of your own.
 To list the permissions on an existing file on the remote storage system, issue:
 
@@ -17,7 +17,20 @@ username READ WRITE EXECUTE
 ```
 
 Where `username` refers to your CyVerse username.
-To update permissions, perform the following:
+The Agave CLI has a nice set of tools that can be used to find other users.
+View your own userprofile by issuing:
+
+```profiles-list -v me```
+
+You can search for your colleagues either by name (`-N`), e-mail address (`-E`), or username (`-U`), provided they have credentials with the same tenant:
+
+```
+profiles-list -v -N "John Doe"
+profiles-list -v -E "john.doe@agave.com
+profiles-list -v -U jdoe
+```
+
+Once the username of the target person is known, permissions can be updated by performing the following:
 
 ```
 files-pems-update -U my_collaborator -P ALL username/sequence12.fasta
