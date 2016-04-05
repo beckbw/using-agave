@@ -40,7 +40,7 @@ Many parameters are required for this application, including `sizeX`, `sizeY`, `
 
 The resulting `vina-job.json` file should look like:
 
-
+A protein file is provided with this tutorial, located at `~using-agave/src/protein.pdbqt`.
 
 
 [Back to: README](../README.md) | [Next: Assembly and Genotyping with DNA Subway](dna_subway.md)

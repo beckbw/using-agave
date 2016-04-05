@@ -1,3 +1,23 @@
-The file `sequence12.txt` was obtained courtesy of the developers of ClustalW2:
+################################################################################
+The file `sequence12.txt` was obtained courtesy of the developers of ClustalW2,
+and renamed as `sequence12.fasta`:
 
 http://www.ebi.ac.uk/Tools/msa/clustalw2/help/faq.html#11
+################################################################################
+
+
+################################################################################
+The file `protein.pdbqt` was originally obtained as `protein.pdb`, courtesy of
+the developers of AutoDOCK Vina. That file was modified as described in the 
+online tutorial to get the pdbqt format:
+
+http://vina.scripps.edu/tutorial.html
+################################################################################
+
+
+################################################################################
+The file `agave-cli.tar.gz` was downloaded from the developers here:
+
+https://bitbucket.org/taccaci/foundation-cli/downloads
+################################################################################
+
