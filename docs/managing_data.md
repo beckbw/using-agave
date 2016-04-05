@@ -7,7 +7,7 @@ To see more information, use the following command:
 ```systems-list -V data.iplantcollaborative.org```
 
 A "system" in Agave is a server or collection of servers associated with a single hostname.
-As you may see in the output from the above command, the iPlant data store is a cloud-based repository from which data is accessed by all of iPlant's (CyVerse's) technologies.
+As you may see in the output from the above command, the CyVerse data store is a cloud-based repository from which data is accessed by all of its technologies.
 To make this your default data repository when using the Agave CLI, issue the command:
 
 ```systems-setdefault data.iplantcollaborative.org```
