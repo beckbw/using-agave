@@ -2,7 +2,7 @@
 
 Using the CyVerse central data store (data.iplantcollaborative.org), it is possible to share data with others users.
 To demonstrate sharing data, we will use the `seqence12.fasta` file uploaded previously in this tutorial.
-If you do not have that file, either [upload it now](managing_data.md), or work with your own file.
+If you do not have that file, either [upload it now](managing_data.md), or work with a file of your own.
 To list the permissions on an existing file on the remote storage system, issue:
 
 ```files-pems-list username/sequence12.fasta```
@@ -27,12 +27,12 @@ files-pems-list username/sequence12.fasta
 dooley READ WRITE EXECUTE 
 ipcservices READ WRITE 
 rodsadmin READ WRITE 
-**my_collaborator READ WRITE EXECUTE**
+my_collaborator READ WRITE EXECUTE
 username READ WRITE EXECUTE 
 ```
 
-Now, a new user with username `my_collaborator` has permissions to access the file.
-Valid values for setting permission are READ, WRITE, EXECUTE, READ_WRITE, READ_EXECUTE, WRITE_EXECUTE, ALL, and NONE.
+Now, a user with CyVerse username `my_collaborator` has permissions to access the file.
+Valid values for setting permission with the `-P` flag are READ, WRITE, EXECUTE, READ_WRITE, READ_EXECUTE, WRITE_EXECUTE, ALL, and NONE.
 This same action can be performed recursively on directories using the `-R` flag.
 
 [Back to: README](../README.md) | Next: Automation
