@@ -1,10 +1,9 @@
 ## Importing Data from Other Systems or the Web
 
-This tutorial previously covered [moving data](managing_data.md) between a local machine and the CyVerse central data store (data.iplantcollaborative.org).
+This tutorial previously covered [managing data](managing_data.md) between a local machine and the CyVerse central data store (data.iplantcollaborative.org).
 It also may be useful to import data from other storage systems, or even from the web.
-The `files-import` command can be for that purpose.
-For example, one of the other public data stores is the 1000 genome project:
-First, use `systems-list` to discover publically available storage systems:
+The `files-import` command can be used for that purpose.
+First, use `systems-list` to discover publicly available storage systems:
 
 ```systems-list -PS```
 ```
