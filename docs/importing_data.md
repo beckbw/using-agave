@@ -14,7 +14,7 @@ ncbi-sra-ftp
 ncbi-refseq
 ncbi-genbank
 ncbi-genbank-genomes
-**ncbi-1000genomes**
+ncbi-1000genomes
 s3-demo-03.iplantc.org
 rodeo.storage.demo
 data.iplantcollaborative.org
