@@ -38,7 +38,7 @@ Token for iplantc.org:username successfully refreshed and cached for 14400 secon
 
 This will make it so you do not have to enter your username and password every time you want to interact with CyVerse via the Agave CLI.
 As such, the above three command (`tenants-init`, `clients-create`, `auth-tokens-create`) are **one time** actions.
-However, for security reasons, the  authentication token expires after four hours.
+However, the  authentication token expires after four hours.
 To check the status of the token, issue:
 
 ```auth-check ```
