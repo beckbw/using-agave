@@ -70,8 +70,11 @@ Once you have identified a file to transfer to your storage system, issue:
 ```files-import -U 'agave://ncbi-1000genomes/path/to/file' username/```
 
 With the above syntax, the file `file` located at `path/to/` and located on the `ncbi-1000genomes` storage system, will be imported to you default storage system (if you have been following this tutorial, `data.iplantcollaborative.org`), and place it in your home directory `username/`.
-Please also note that even though you are able to import files from other Agave storage systems, you may not *need* to import files from other Agave storage systems.
-Most Agave applications will allow you to provide a complete URI path to the file, e.g. `agave://ncbi-1000genomes/path/to/file`, in which case you would not need to take time and space copying it.
+
+Please also note that even though you are able to import files from other Agave storage systems, you may not always *need* to import files.
+Most Agave applications will allow you to provide a complete URI path to the file, e.g. `agave://ncbi-1000genomes/path/to/file`.
+This is very useful, for example, in the case of large reference libraries.
+Pointing to the remote libraries rather than copying them would save time and disk space.
 
 Similarly, you could import that same file (or most any file), using the URL.
 This is useful to import files that are not part of an Agave storage system:
