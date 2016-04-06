@@ -112,6 +112,6 @@ The `inputs` section of the app contains the following:
 It appears that only one input is taken: a fasta file.
 According to the description, it should be a "(non-aligned) FASTA sequences to be aligned."
 
-Once the appropriate application has been identified, then the next steps are to stage the necessary data, create a job template, and submit the job.
+Once the appropriate application has been identified, then the next steps are to stage the necessary data, create a job template, and submit the job. For more information on the syntax of searching, please see the [Agave Documentation](http://agaveapi.co/documentation/search-guide/).
 
 [Back to: README](../README.md) | [Next: Creating and Submitting a Job](creating_submitting_jobs.md)
