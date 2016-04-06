@@ -4,7 +4,6 @@ Continuing from the previous example of ClustalW, we know that the only input ta
 Upload that sample file to the CyVerse data store by first navigating to the `using-agave/` directory, then by issuing:
 
 ```
-cd /path/to/using-agave
 files-upload -F src/sequence12.fasta username/
 files-list -L username/
 ```

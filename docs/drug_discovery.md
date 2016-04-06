@@ -106,11 +106,10 @@ In this tutorial, we will choose the second method.
 
 At this point, you may not have access to a storage system on the **tacc.prod** tenant.
 In order to upload a `proteinFile`, we have to quickly switch back to the **iplantc.org** tenant.
-A protein file is provided with this tutorial, located at `~using-agave/src/protein.pdbqt`.
+A protein file is provided with this tutorial, located in this git bundle at `~using-agave/src/protein.pdbqt`.
 Issue the following commands:
 
 ```
-cd /path/to/using-agave/
 tenants-init -s					# switched to iplantc.org tenant
 auth-check
 auth-tokens-refresh				# if necessary

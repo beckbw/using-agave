@@ -27,7 +27,8 @@ You may also consider adding the whole path to your `~/.bashrc` so that each new
 
 ```echo "PATH=/complete/path/to/using-agave/src/agave-cli/bin:\$PATH" >> ~/.bashrc```
 
-(Replace `/complete/path/to` with the actual path to the `using-agave/` directory.)
+(Replace `/complete/path/to` with the actual path to the `using-agave/` directory.
+You can determine this by navigating to that directory and typing `pwd`.)
 Note that if you move or rename this project directory, the Agave commands will no longer be in your PATH, and the previous steps will need to be repeated.
 Finally, verify that the Agave CLI has been added to the PATH by executing:
 
