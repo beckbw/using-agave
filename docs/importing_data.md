@@ -59,25 +59,25 @@ A subset of the output includes:
 This storage system is registered to the `ftp.ncbi.nih.gov` host.
 (Try dropping that hostname into a web browser).
 Currently, your environment may be configured so that `data.iplantcollaborative.org` is your default storage system.
-It is still possible to list files that are available on other storage systems as long the identity of the system is explicitly stated.
+It is still possible to list files on other storage systems as long the identity of the system is explicitly stated.
 For example:
 
 ```files-list -L -S ncbi-1000genomes /```
 
 The trailing `/` indicates that you want to list the default home directory of that storage system.
 One file that appears is called `README.complete_genomics_data`.
-Transfer it to the path `username/` on your default storage system with the command:
+Transfer it to your default storage system with the command:
 
 ```files-import -U 'agave://ncbi-1000genomes/README.complete_genomics_data' username/```
 
-With the above syntax, the file located at the home directory `/` on the `ncbi-1000genomes` storage system will be imported to your default storage system (if you have been following this tutorial, `data.iplantcollaborative.org`), and place it in your home directory `username/`.
+With the above syntax, the file located at the home directory `/` on the `ncbi-1000genomes` storage system will be imported to your default storage system (if you have been following this tutorial, `data.iplantcollaborative.org`), and placed in your home directory `username/`.
 
-Please also note that even though you are able to import files from other Agave storage systems, you may not always *need* to import files.
+Please also note that even though you are *able* to import files from other Agave storage systems, you may not always *need* to import those files.
 Most Agave applications will allow you to provide a complete URI path to the file, e.g. `agave://ncbi-1000genomes/README.complete_genomics_data`.
 This is very useful, for example, in the case of large reference libraries.
 Pointing to the remote libraries rather than copying them saves time and disk space.
 
-Similarly, you can import files from the web using the URL.
+Finally, you can also import files from the web using the URL.
 This is useful to import files that are not part of an Agave storage system:
 
 ```
