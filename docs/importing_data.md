@@ -57,6 +57,7 @@ A subset of the output includes:
 ```
 
 This storage system is registered to the `ftp.ncbi.nih.gov` host.
+(Try dropping that hostname into a web browser).
 Currently, your environment may be configured so that `data.iplantcollaborative.org` is your default storage system.
 It is still possible to list files that are available on other storage systems as long the identity of the system is explicitly stated.
 For example:
@@ -64,6 +65,21 @@ For example:
 ```files-list -S ncbi-1000genomes```
 
 
-```files-import ```
+Once you have identified a file to transfer to your storage system, issue:
+
+```files-import -U 'agave://ncbi-1000genomes/path/to/file' username/```
+
+With the above syntax, the file `file` located at `path/to/` and located on the `ncbi-1000genomes` storage system, will be imported to you default storage system (if you have been following this tutorial, `data.iplantcollaborative.org`), and place it in your home directory `username/`.
+
+Similarly, you could import that same file (or most any file), using the URL.
+This is useful to import files that are not part of an Agave storage system:
+
+```
+files-import -U 'ftp://ftp.ncbi.nih.gov/path/to/file' username/
+files-import -U 'https://github.com/wjallen/using-agave/blob/master/src/sequence12.fasta' username/
+files-import -U 'https://github.com/wjallen/using-agave/blob/master/src/sequence12.fasta' -W 'username@email.edu' username/
+```
+
+The final example above demonstrates a nice feature that sends an e-mail when the transfer is complete.
 
 [Back to: README](../README.md) | [Next: Sharing Data with Other Users](sharing_data.md)
