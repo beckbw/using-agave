@@ -23,7 +23,6 @@ __Part 2__
 * [Assumptions So Far](docs/assumptions_so_far.md)
 * [Importing Data from Other Systems or the Web](docs/importing_data.md)
 * [Sharing Data with Other Users](docs/sharing_data.md)
-* [Automating Tasks](docs/automating_tasks.md)
 * [Ex 1: Running the Drug Discovery Portal from the Command Line](docs/drug_discovery.md)
 * [Ex 2: Assembly and Genotyping with DNA Subway](docs/dna_subway.md)
 

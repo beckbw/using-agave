@@ -95,12 +95,14 @@ The resulting `vina-job.json` file should look like:
 ```
 
 There are several terms in this job file that need to be understood and modified.
+(See Agave documentation on this [here](http://agaveapi.co/documentation/tutorials/app-management-tutorial/).)
 First, notice that the `executionSystem` is called `docking.exec.lonestar`.
-This likely indicates that the job will be run on the Lonestar supercomputer.
+This seems to indicate that the job will be run on the Lonestar supercomputer.
 (This can quickly be confirmed with `systems-list -v docking.exec.lonestar`.)
+
 Why is this important?
 The queue settings must match the node architecture of the execution system.
-Referring to the Lonestar 4 [documentation](https://portal.tacc.utexas.edu/user-guides/lonestar), we find that the `normal` nodes are `12` core each and have `24GB` of RAM.
+Referring to the Lonestar 4 [documentation](https://portal.tacc.utexas.edu/user-guides/lonestar), we find that the **normal** nodes are **12** core each and have **24GB** of RAM.
 To match those settings, use the following options:
 
 ```
@@ -167,21 +169,40 @@ Next, insert the following box sizes and centers:
   },
 ```
 
-These values were taken from the [AutoDock Vina tutorial](http://vina.scripps.edu/tutorial.html), which uses this same protein file.
+These values were taken from the [AutoDock Vina tutorial](http://vina.scripps.edu/tutorial.html), which is also the origin of the protein file.
 Also notice that the `ligandIndices` parameter was removed.
-Finally, use the following `paramlist` that points to small ligand library:
+Finally, use the following path for `paramFile` that points to small ligand library:
 
 ```"paramFile": "/scratch/01114/jfonner/DockingPortal/TestSet/paramlist",```
 
 Once everything is ready, submit the job with the command:
 
-```jobs-submit -F vina-job.json```
+```jobs-submit -F vina-job.json```m
 
 A long number, which is the job ID, will be returned if the submission was succesful.
-To track the progress of the job, use the `jobs-history`, `jobs-status`, and `jobs-list` commands.
-(Execute these commands with the `-h` flag to find usage information.)
-If you have access to Lonestar, you may also check the status of the job in the queue with `showq -u`.
+To track the progress of the job, use the `jobs-history`, `jobs-status`, and `jobs-list` commands. For example:
 
-Once the job status is `FINISHED`, check and download the results with the `jobs-output-list` and `jobs-output-get` commands.
+```
+jobs-history 706429864087682021-242ac114-0001-007
+jobs-statsy 706429864087682021-242ac114-0001-007
+jobs-list 706429864087682021-242ac114-0001-007
+```
+
+(Execute these commands with the `-h` flag to find more usage information.)
+Jobs themselves pass through many different stages including PENDING (waiting for submission), RUNNING (running in the queue), FINISHED (completed), and FAILED (job failed).
+A full list of statuses and descriptions can be found [here](http://agaveapi.co/documentation/tutorials/job-management-tutorial/).
+
+If you have access toi the Lonestar supercomputer, you may also check the status of the job in the queue with `showq -u`.
+Once the job status is "FINISHED", the results can be listed and downloaded with the following commands:
+
+```
+jobs-output-list -L 706429864087682021-242ac114-0001-007
+jobs-output-list -L 706429864087682021-242ac114-0001-007 a_folder/
+jobs-output-get -r 706429864087682021-242ac114-0001-007
+jobs-output-get 706429864087682021-242ac114-0001-007 a_folder/a_file
+```
+
+The output can be navigated with `jobs-output-list` in the same way that `files-list` is used to navigate a storage system.
+Also, ouput can be downloaded with `jobs-output-get` recursively, or a single file at a time.
 
 [Back to: README](../README.md) | [Next: Assembly and Genotyping with DNA Subway](dna_subway.md)
