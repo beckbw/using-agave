@@ -1,7 +1,7 @@
 ## Sharing Data with Other Users
 
 Using Agave storage systems, such as the CyVerse central data store (data.iplantcollaborative.org), it is easy to share data with others users.
-As a data sharing demonstration, we will use the `seqence12.fasta` file uploaded previously in this tutorial.
+As a data sharing demonstration, we will use the `sequence12.fasta` file uploaded previously in this tutorial.
 If you do not have that file, either [upload it now](managing_data.md), or work with a file of your own.
 To list the permissions on an existing file on the remote storage system, issue:
 

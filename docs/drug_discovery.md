@@ -1,7 +1,9 @@
 ## Running the Drug Discovery Portal from the Command Line
 
-DrugDiscovery@TACC is a web portal that allows users to upload a protein file and perform a virtual screen with pre-defined ZINC libraries.
-Access is controlled through a web login with [TACC credentials](https://portal.tacc.utexas.edu/).
+*Note: To complete this example, you must have TACC credentials and access to the tacc.prod tenant.*
+
+DrugDiscovery@TACC is a web portal that allows users to upload a protein file and perform a virtual screen with pre-defined ligand libraries.
+Access to the portal is controlled through a web login with [TACC credentials](https://portal.tacc.utexas.edu/).
 Behind the scenes, the portal stages the relevant data on a TACC storage system, assembles a json-format job file, executes the job, and returns the results all using the Agave platform.
 More information can be found on [DrugDiscovery@TACC website](https://drugdiscovery.tacc.utexas.edu/).
 
@@ -97,49 +99,88 @@ First, notice that the `executionSystem` is called `docking.exec.lonestar`.
 This likely indicates that the job will be run on the Lonestar supercomputer.
 (This can quickly be confirmed with `systems-list -v docking.exec.lonestar`.)
 Why is this important?
-Because the input `proteinFile` and `ligandFiles` are pointing to absolute paths _on the execution machine_.
+The queue settings must match the node architecture of the execution system.
+Referring to the Lonestar 4 documentation, we find that the `normal` nodes are `12` core each and have `24GB` of RAM.
+To match those settings, use the following options:
 
+```
+"batchQueue": "normal",
+"executionSystem": "docking.exec.lonestar",
+"maxRunTime": "02:00:00",
+"memoryPerNode": "24GB",
+"nodeCount": 2,
+"processorsPerNode": 12,
+```
+
+Next, the input `proteinFile` and `ligandFiles` areo pointing to absolute paths _on the storage system_.
 There are two options to proceed.
 First, if you have access to Lonestar, you could upload a `proteinFile` to your $HOME or $WORK space, then provide in this job script the complete path to that file.
 Second, you could upload a `proteinFile` to any Agave storage system, and provide the complete Agave URI to that file.
 In this tutorial, we will choose the second method.
 
-At this point, you may not have access to a storage system on the **tacc.prod** tenant.
-In order to upload a `proteinFile`, we have to quickly switch back to the **iplantc.org** tenant.
+In order to upload a `proteinFile`, we have to quickly switch back to the **iplantc.org** tenant where we have access to a storage system.
 A protein file is provided with this tutorial, located in this git bundle at `~using-agave/src/protein.pdbqt`.
 Issue the following commands:
 
 ```
-tenants-init -s					# switched to iplantc.org tenant
+tenants-init -s							# switch to iplantc.org tenant
 auth-check
-auth-tokens-refresh				# if necessary
+auth-tokens-refresh						# if necessary
 files-upload -F src/protein.pdbqt username/
-files-list -L					# confirm the file is there
-tenants-init -s					# switch back to tacc.prod tenant
+files-list -L							# confirm the file is there
+tenants-init -s							# switch back to tacc.prod tenant
 auth-check
 ```
 
-Now in the `vina-job.json` file, modify the `proteinFile` input to:
+Now in the `vina-job.json` file, modify the `proteinFile` input to the complete URI, then delete the optional input called `ligandFiles`, which will not be used in this tutorial:
 
-```"proteinFile": "agave://data.iplantcollaborative.org/username/protein.pdbqt"```
+**Before:**
+```
+  "inputs": {
+    "proteinFile": "/work/02875/docking/apps/vina/1.1.2/lonestar/test/2FOM.pdbqt",
+    "ligandFiles": [ 
+      "/work/02875/docking/apps/vina/1.1.2/lonestar/test/ZINC00000567.pdbqt",
+      "/work/02875/docking/apps/vina/1.1.2/lonestar/test/ZINC00000707.pdbqt"
+    ]
+  },
+```
 
-Delete the two lines that point to ligands, but don't delete the `ligandFiles` key itself:
+**After:**
+```
+  "inputs": {
+    "proteinFile": "agave://data.iplantcollaborative.org/username/protein.pdbqt"
+  },
+```
 
-```"ligandFiles": []```
-
-Now, modify the box size and center parameters as follows:
+Notice that the comma `,` was removed from the end of the `proteinFile` line to preserve json formatting.
+Next, insert the following box sizes and centers:
 
 ```
-sizeX, sizeY, sizeZ, centerX, centerY, centerZ
+ "parameters": {
+    "sizeY": 24,
+    "centerZ": 57.5,
+    "sizeZ": 28,
+    "centerX": 11,
+    "sizeX": 22,
+    "paramFile": "/scratch/01114/jfonner/DockingPortal/TestSet/paramlist",
+    "centerY": 90.5
+  },
 ```
 
-And finally, use the following paramlist that points to a specific ligand library:
+These values were taken from the [AutoDock Vina tutorial](http://vina.scripps.edu/tutorial.html), which uses this same protein file.
+Also notice that the `ligandIndices` parameter was removed.
+Finally, use the following `paramlist` that points to small ligand library:
 
-```
-Is there any way for the user to know what the paramlist options are?
-```
+```"paramFile": "/scratch/01114/jfonner/DockingPortal/TestSet/paramlist",```
 
 #### Submit the job
+Once everything is ready, submit the job with the command:
+
+```jobs-submit -F vina-job.json```
+
+A long number, which is the job ID, will be returned if the submission was succesful.
+To track the progress of the job, user the `jobs-history`, `jobs-status`, and `jobs-list` commands.
+If you have access to Lonestar, you may also check the status of the job in the queue with `showq -u`.
 
 #### Download the results
 [Back to: README](../README.md) | [Next: Assembly and Genotyping with DNA Subway](dna_subway.md)
