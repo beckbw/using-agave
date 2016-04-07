@@ -100,7 +100,7 @@ This likely indicates that the job will be run on the Lonestar supercomputer.
 (This can quickly be confirmed with `systems-list -v docking.exec.lonestar`.)
 Why is this important?
 The queue settings must match the node architecture of the execution system.
-Referring to the Lonestar 4 documentation, we find that the `normal` nodes are `12` core each and have `24GB` of RAM.
+Referring to the Lonestar 4 [documentation](https://portal.tacc.utexas.edu/user-guides/lonestar), we find that the `normal` nodes are `12` core each and have `24GB` of RAM.
 To match those settings, use the following options:
 
 ```
@@ -112,7 +112,7 @@ To match those settings, use the following options:
 "processorsPerNode": 12,
 ```
 
-Next, the input `proteinFile` and `ligandFiles` areo pointing to absolute paths _on the storage system_.
+Next, the input `proteinFile` and `ligandFiles` are pointing to absolute paths _on the storage system_.
 There are two options to proceed.
 First, if you have access to Lonestar, you could upload a `proteinFile` to your $HOME or $WORK space, then provide in this job script the complete path to that file.
 Second, you could upload a `proteinFile` to any Agave storage system, and provide the complete Agave URI to that file.
@@ -173,14 +173,15 @@ Finally, use the following `paramlist` that points to small ligand library:
 
 ```"paramFile": "/scratch/01114/jfonner/DockingPortal/TestSet/paramlist",```
 
-#### Submit the job
 Once everything is ready, submit the job with the command:
 
 ```jobs-submit -F vina-job.json```
 
 A long number, which is the job ID, will be returned if the submission was succesful.
-To track the progress of the job, user the `jobs-history`, `jobs-status`, and `jobs-list` commands.
+To track the progress of the job, use the `jobs-history`, `jobs-status`, and `jobs-list` commands.
+(Execute these commands with the `-h` flag to find usage information.)
 If you have access to Lonestar, you may also check the status of the job in the queue with `showq -u`.
 
-#### Download the results
+Once the job status is `FINISHED`, check and download the results with the `jobs-output-list` and `jobs-output-get` commands.
+
 [Back to: README](../README.md) | [Next: Assembly and Genotyping with DNA Subway](dna_subway.md)
