@@ -2,4 +2,4 @@
 
 Coming soon...
 
-[Back to: README](../README.md) | Next: Ex3
+[Back to: README](../README.md)
