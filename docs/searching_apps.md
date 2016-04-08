@@ -112,7 +112,7 @@ The `inputs` section of the app contains the following:
 It appears that only one input is taken: a fasta file.
 According to the description, it should be a "(non-aligned) FASTA sequences to be aligned."
 
-Another useful approach to browse apps is with the `tags` keyword. For example:
+Another useful approach to browse applications is with the `tags` keyword. For example:
 
 ```apps-search tags.like=*variant*```
 
