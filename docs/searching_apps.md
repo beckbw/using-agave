@@ -114,6 +114,23 @@ According to the description, it should be a "(non-aligned) FASTA sequences to b
 
 Another useful approach to browse applications is with the `tags` keyword. For example:
 
+```apps-search tags.like=*assembly*```
+
+```
+FALCON-0.4.2u3
+idba_ud_1000gb_24h-1.1.2u1
+idba_ud_32gb_24h-1.1.2u1
+idba_ud_32gb_4h-1.1.2u1
+trinity_normalize_kmer_coverage_lonestar-11.10.13u1
+trinity-stmpde-11.10.13u2
+dnasubway-cuffdiff-lonestar-2.1.1u4
+dnasubway-cuffmerge-lonestar-2.1.1u1
+dnasubway-cuffmerge-lonestar-2.1.1u2
+dnasubway-cufflinks-lonestar-2.1.1u3
+dnasubway-cuffdiff-lonestar-2.1.1u5
+HTProcess_Jellyfish-2.0.0u1
+```
+
 ```apps-search tags.like=*variant*```
 
 ```
@@ -131,23 +148,6 @@ ianimal-savp-bwa-mem-0.3.0u1
 ianimal-savp-refprep-0.3.0u1
 ianimal-savp-0.3.0u1
 ianimal-savp-bwa-aln-0.3.0u1
-```
-
-```apps-search tags.like=*assembly*```
-
-```
-FALCON-0.4.2u3
-idba_ud_1000gb_24h-1.1.2u1
-idba_ud_32gb_24h-1.1.2u1
-idba_ud_32gb_4h-1.1.2u1
-trinity_normalize_kmer_coverage_lonestar-11.10.13u1
-trinity-stmpde-11.10.13u2
-dnasubway-cuffdiff-lonestar-2.1.1u4
-dnasubway-cuffmerge-lonestar-2.1.1u1
-dnasubway-cuffmerge-lonestar-2.1.1u2
-dnasubway-cufflinks-lonestar-2.1.1u3
-dnasubway-cuffdiff-lonestar-2.1.1u5
-HTProcess_Jellyfish-2.0.0u1
 ```
 
 Once the appropriate application has been identified, then the next steps are to stage the necessary data, create a job template, and submit the job. For more information on the syntax of searching, please see the [Agave Documentation](http://agaveapi.co/documentation/search-guide/).
