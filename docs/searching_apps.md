@@ -112,6 +112,44 @@ The `inputs` section of the app contains the following:
 It appears that only one input is taken: a fasta file.
 According to the description, it should be a "(non-aligned) FASTA sequences to be aligned."
 
+Another useful approach to browse apps is with the `tags` keyword. For example:
+
+```apps-search tags.like=*variant*```
+
+```
+savp-bwa-mem-0.4.0u1
+savp-bwa-aln-0.4.0u1
+savp-refprep-0.4.0u2
+savp-0.3.1u1
+GATK_haplotypecaller-3.2.2u1
+GATK_combinegvcfs-3.2.2u1
+GATK_genotypegvcfs-3.2.2u1
+Platypus-0.7.9.5u1
+Freebayes-0.9.20u1
+GATK_unifiedgenotyper-3.2.2u1
+ianimal-savp-bwa-mem-0.3.0u1
+ianimal-savp-refprep-0.3.0u1
+ianimal-savp-0.3.0u1
+ianimal-savp-bwa-aln-0.3.0u1
+```
+
+```apps-search tags.like=*assembly*```
+
+```
+FALCON-0.4.2u3
+idba_ud_1000gb_24h-1.1.2u1
+idba_ud_32gb_24h-1.1.2u1
+idba_ud_32gb_4h-1.1.2u1
+trinity_normalize_kmer_coverage_lonestar-11.10.13u1
+trinity-stmpde-11.10.13u2
+dnasubway-cuffdiff-lonestar-2.1.1u4
+dnasubway-cuffmerge-lonestar-2.1.1u1
+dnasubway-cuffmerge-lonestar-2.1.1u2
+dnasubway-cufflinks-lonestar-2.1.1u3
+dnasubway-cuffdiff-lonestar-2.1.1u5
+HTProcess_Jellyfish-2.0.0u1
+```
+
 Once the appropriate application has been identified, then the next steps are to stage the necessary data, create a job template, and submit the job. For more information on the syntax of searching, please see the [Agave Documentation](http://agaveapi.co/documentation/search-guide/).
 
 [Back to: README](../README.md) | [Next: Creating and Submitting a Job](creating_submitting_jobs.md)
