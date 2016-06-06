@@ -1,4 +1,4 @@
-## Assembly and Genotyping with DNA Subway 
+## Assembly and Genotyping
 
 Coming soon...
 
