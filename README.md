@@ -24,7 +24,7 @@ __Part 2__
 * [Importing Data from Other Systems or the Web](docs/importing_data.md)
 * [Sharing Data with Other Users](docs/sharing_data.md)
 * [Ex 1: Running the Drug Discovery Portal from the Command Line](docs/drug_discovery.md)
-* [Ex 2: Assembly and Genotyping with DNA Subway](docs/dna_subway.md)
+* [Ex 2: Assembly and Genotyping](docs/assembly.md)
 
 If you are interested in learning to develop your own application bundles, please visit the [CyVerse SDK](https://github.com/iPlantCollaborativeOpenSource/cyverse-sdk).
 
