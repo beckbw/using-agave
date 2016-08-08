@@ -39,6 +39,6 @@ The path to the Agave CLI should appear, e.g.:
 ```/home/username/using-agave/src/agave-cli/bin/tenants-init ```
 
 Note that the version of the Agave CLI bundled here is 2.1.4 (2015-09-14).
-The Agave CLI is ever evolving, so please consider downloading the current source [here](https://bitbucket.org/taccaci/foundation-cli).
+The Agave CLI is ever evolving, so please consider downloading the current source [here](https://bitbucket.org/agaveapi/cli).
 
 [Back to: README](../README.md) | [Next: Initializing with CyVerse](initializing.md)
