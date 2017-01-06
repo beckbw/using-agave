@@ -1,8 +1,9 @@
 ## Installing the Agave CLI
 
-The Agave CLI is a collection of about one hundred different bash scripts.
+The Agave CLI is a collection of about 120 different bash scripts.
 The purpose of these scripts is to facilitate building cURL commands for interaction with the web API.
 A version of the Agave CLI is distributed with this tutorial.
+In order to make sure you are using an up-to-date version of the Agave CLI, please clone directly from the source.
 To begin, open up a terminal window and navigate to a directory where you would like to organize this work.
 Then, clone this tutorial:
 
@@ -12,20 +13,20 @@ Navigate into the `using-agave/` directory, then into the `src/` directory:
 
 ```cd using-agave/src/```
 
-Unpack the file containing the Agave CLI:
+Here, clone the Agave CLI:
 
-```tar -xzf agave-cli.tar.gz```
+```git clone https://bitbucket.org/agaveapi/cli```
 
 Add the Agave CLI to your PATH, so that you may access the commands from anywhere on the current machine:
 
 ```
-cd agave-cli/bin/
+cd cli/bin/
 export PATH=$PWD:$PATH
 ```
 
 You may also consider adding the whole path to your `~/.bashrc` so that each new terminal session knows the location:
 
-```echo "PATH=/complete/path/to/using-agave/src/agave-cli/bin:\$PATH" >> ~/.bashrc```
+```echo "PATH=/complete/path/to/using-agave/src/cli/bin:\$PATH" >> ~/.bashrc```
 
 (Replace `/complete/path/to` with the actual path to the `using-agave/` directory.
 You can determine this by navigating to that directory and typing `pwd`.)
@@ -36,9 +37,6 @@ Finally, verify that the Agave CLI has been added to the PATH by executing:
 
 The path to the Agave CLI should appear, e.g.:
 
-```/home/username/using-agave/src/agave-cli/bin/tenants-init ```
-
-Note that the version of the Agave CLI bundled here is 2.1.4 (2015-09-14).
-The Agave CLI is ever evolving, so please consider downloading the current source [here](https://bitbucket.org/agaveapi/cli).
+```/home/username/using-agave/src/cli/bin/tenants-init ```
 
 [Back to: README](../README.md) | [Next: Initializing with CyVerse](initializing.md)
