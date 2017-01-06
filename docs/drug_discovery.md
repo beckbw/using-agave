@@ -205,4 +205,4 @@ jobs-output-get 706429864087682021-242ac114-0001-007 a_folder/a_file
 The output can be navigated with `jobs-output-list` in the same way that `files-list` is used to navigate a storage system.
 Also, ouput can be downloaded with `jobs-output-get` recursively, or a single file at a time.
 
-[Back to: README](../README.md) | [Next: Assembly and Genotyping with DNA Subway](dna_subway.md)
+[Back to: README](../README.md) | [Next: Assembly and Genotyping](assembly.md)

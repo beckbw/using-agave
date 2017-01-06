@@ -48,4 +48,27 @@ Now, a user with CyVerse username `my_collaborator` has permissions to access th
 Valid values for setting permission with the `-P` flag are READ, WRITE, EXECUTE, READ_WRITE, READ_EXECUTE, WRITE_EXECUTE, ALL, and NONE.
 This same action can be performed recursively on directories using the `-R` flag.
 
-[Back to: README](../README.md) | [Next: Running the Drug Discovery Portal from the Command Line](drug_discovery.md)
+### Sharing Data using PostIts
+
+Another convenient way to share data is the Agave postits service.
+Postits generate a short URL with a user-specified lifetime and limited number of uses.
+Anyone with the URL can paste it into a web browser, or curl against it on the command line.
+Continuing with the above example file (`sequence12.fasta`) located on the CyVerse central data storage system, the process to create a postit to that file is as follows:
+
+```postits-create -m 5 -l 3600 https://agave.iplantc.org/files/v2/media/system/data.iplantcollaborative.org//username/seqence12.fasta```
+
+The json response from this command is the URL, e.g.:
+
+```https://agave.iplantc.org/postits/v2/866d55b36a459e8098173655e916fa15```
+
+This postit is only good for 5 downloads (`-m 5`) and only available for one hour (3600 seconds, `-l 3600`). The creator of the postit can list and delete their postits with the following commands:
+
+```
+postits-list -V
+postits-delete 866d55b36a459e8098173655e916fa15
+```
+
+The long alphanumeric string is the postit UUID displayed by the verbose postits-list command.
+
+  
+[Back to: README](../README.md) | [Next: Blah](blah)

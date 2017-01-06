@@ -6,10 +6,10 @@ CyVerse grants access to that cyberinfrastructure through multiple application p
 One such method of access is via the [Agave](http://agaveapi.co/) command line interface (CLI).
 
 The objective of this tutorial is to demonstrate how to effectively use the Agave CLI to take advantage of the CyVerse cyberinfrastructure.
-It is divided into two parts.
+It is divided into three parts.
 The first part is an introductory-level demonstration of how to configure your command line environment to interact with the CyVerse cyberinfrastructure, and how to perform some basic Agave functions:
 
-__Part 1__
+__Part 1: Basic Principles__
 * [Intial Assumptions](docs/initial_assumptions.md)
 * [Installing the Agave CLI](docs/installing_agave.md)
 * [Initializing with CyVerse](docs/initializing.md)
@@ -17,12 +17,12 @@ __Part 1__
 * [Searching for an Application](docs/searching_apps.md)
 * [Creating and Submitting a Job](docs/creating_submitting_jobs.md)
 
-The second part is an intermediate-level demonstration of the application of the Agave CLI towards a few different end-use cases. If you are already familiar with the basics of the Agave CLI, you may want to start here:
-
-__Part 2__
+__Part 2: Intermediate CLI Functions__
 * [Assumptions So Far](docs/assumptions_so_far.md)
 * [Importing Data from Other Systems or the Web](docs/importing_data.md)
 * [Sharing Data with Other Users](docs/sharing_data.md)
+
+__Part 3: Advanced Usage__
 * [Ex 1: Running the Drug Discovery Portal from the Command Line](docs/drug_discovery.md)
 * [Ex 2: Assembly and Genotyping](docs/assembly.md)
 
