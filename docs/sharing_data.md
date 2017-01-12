@@ -59,7 +59,7 @@ Continuing with the above example file (`sequence12.fasta`) located on the CyVer
 
 The json response from this command is the URL, e.g.:
 
-```https://agave.iplantc.org/postits/v2/866d55b36a459e8098173655e916fa15```
+``` https://agave.iplantc.org/postits/v2/866d55b36a459e8098173655e916fa15 ```
 
 This postit is only good for 5 downloads (`-m 5`) and only available for one hour (3600 seconds, `-l 3600`). The creator of the postit can list and delete their postits with the following commands:
 
