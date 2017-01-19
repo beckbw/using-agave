@@ -1,8 +1,7 @@
 ## Installing the Agave CLI
 
-The Agave CLI is a collection of about 120 different bash scripts.
+The Agave CLI is a collection of over 100 different bash scripts.
 The purpose of these scripts is to facilitate building cURL commands for interaction with the web API.
-A version of the Agave CLI is distributed with this tutorial.
 In order to make sure you are using an up-to-date version of the Agave CLI, please clone directly from the source.
 To begin, open up a terminal window and navigate to a directory where you would like to organize this work.
 Then, clone this tutorial:

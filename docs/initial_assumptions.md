@@ -3,7 +3,7 @@
 To complete this tutorial, we assume the following:
 
 * You have a CyVerse (formerly known as iPlant) account
- * If not, register here: [https://user.iplantcollaborative.org/](https://user.iplantcollaborative.org/)
+ * If not, register here: [https://user.cyverse.org/](https://user.cyverse.org/) 
 * You have access to a Linux or Mac OS X command line environment
 * You have [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), [cURL](https://curl.haxx.se/docs/install.html), and [Bash](https://www.gnu.org/software/bash/manual/html_node/Installing-Bash.html) installed
  * These are installed by default on many machines
