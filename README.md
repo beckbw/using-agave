@@ -6,8 +6,7 @@ CyVerse grants access to that cyberinfrastructure through multiple application p
 One such method of access is via the [Agave](http://agaveapi.co/) command line interface (CLI).
 
 The objective of this tutorial is to demonstrate how to effectively use the Agave CLI to take advantage of the CyVerse cyberinfrastructure.
-It is divided into three parts.
-The first part is an introductory-level demonstration of how to configure your command line environment to interact with the CyVerse cyberinfrastructure, and how to perform some basic Agave functions:
+It is divided into three parts:
 
 __Part 1: Basic Principles__
 * [Intial Assumptions](docs/initial_assumptions.md)
@@ -17,7 +16,7 @@ __Part 1: Basic Principles__
 * [Searching for an Application](docs/searching_apps.md)
 * [Creating and Submitting a Job](docs/creating_submitting_jobs.md)
 
-__Part 2: Intermediate CLI Functions__
+__Part 2: Intermediate CLI__
 * [Assumptions So Far](docs/assumptions_so_far.md)
 * [Importing Data from Other Systems or the Web](docs/importing_data.md)
 * [Sharing Data with Other Users](docs/sharing_data.md)
