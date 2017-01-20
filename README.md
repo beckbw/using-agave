@@ -29,5 +29,4 @@ __Part 3: Advanced Usage__
 * [Drug Discovery](docs/drug_discovery.md)
 * [Assembly and Genotyping](docs/assembly.md)
 
-If you are interested in learning to develop your own application bundles, please visit the [CyVerse SDK](https://github.com/iPlantCollaborativeOpenSource/cyverse-sdk).
 
