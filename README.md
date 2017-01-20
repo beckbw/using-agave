@@ -21,8 +21,8 @@ __Part 2: Intermediate CLI__
 * [Importing Data from Other Systems or the Web](docs/importing_data.md)
 * [Sharing Data with Other Users](docs/sharing_data.md)
 * [Using Monitors to Track System Health](docs/using_monitors.md)
-* [Managing Identities](managing_identities.md)
-* [Advanced Job Control](job_control.md)
+* [Managing Identities](docs/managing_identities.md)
+* [Advanced Job Control](docs/job_control.md)
 
 __Part 3: Advanced Usage__
 * [Creating Systems and Apps](docs/creating_apps.md)
