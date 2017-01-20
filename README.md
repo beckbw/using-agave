@@ -26,8 +26,8 @@ __Part 2: Intermediate CLI__
 
 __Part 3: Advanced Usage__
 * [Creating Systems and Apps](docs/creating_apps.md)
-* [Ex 1: Running the Drug Discovery Portal from the Command Line](docs/drug_discovery.md)
-* [Ex 2: Assembly and Genotyping](docs/assembly.md)
+* [Drug Discovery](docs/drug_discovery.md)
+* [Assembly and Genotyping](docs/assembly.md)
 
 If you are interested in learning to develop your own application bundles, please visit the [CyVerse SDK](https://github.com/iPlantCollaborativeOpenSource/cyverse-sdk).
 
