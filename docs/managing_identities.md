@@ -1,5 +1,7 @@
 ## Managing Identities
 
+Coming soon...
+
 Tools covered in this tutorial:
 
 ```
@@ -15,4 +17,4 @@ profiles-users-list
 
 
 
-[Back to: README](../README.md) | [Next: Blah](blah.md)
+[Back to: README](../README.md) | [Next: Advanced Job Control](job_control.md)
