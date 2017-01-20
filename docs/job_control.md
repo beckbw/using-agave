@@ -1,5 +1,7 @@
 ## Advanced Job Control
 
+Coming soon...
+
 Tools covered in this tutorial:
 
 ```
@@ -16,4 +18,4 @@ jobs-status
 jobs-stop
 ```
   
-[Back to: README](../README.md) | [Next: Blah](blah)
+[Back to: README](../README.md)
