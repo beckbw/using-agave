@@ -1,4 +1,4 @@
-## Running the Drug Discovery Portal from the Command Line
+## Drug Discovery
 
 *Note: To complete this example, you must have TACC credentials and access to the tacc.prod tenant.*
 
