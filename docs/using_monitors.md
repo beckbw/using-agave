@@ -15,4 +15,4 @@ monitors-history
 monitors-list
 ```
   
-[Back to: README](../README.md) | [Next: Managing Identities](docs/managing_identities.md)
+[Back to: README](../README.md) | [Next: Managing Identities](managing_identities.md)
