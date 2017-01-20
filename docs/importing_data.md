@@ -7,17 +7,15 @@ First, use `systems-list` to discover publicly available storage systems:
 
 ```systems-list -PS```
 ```
-us-west-1.data.iplantcollaborative.org
+data.iplantcollaborative.org
 data.tacc.utexas.edu
-austin.data.iplantcollaborative.org
-ncbi-sra-ftp
-ncbi-refseq
+irods-2.cyverse.org
+ncbi-1000genomes
 ncbi-genbank
 ncbi-genbank-genomes
-ncbi-1000genomes
-s3-demo-03.iplantc.org
-rodeo.storage.demo
-data.iplantcollaborative.org
+ncbi-refseq
+ncbi-sra-ftp
+us-west-1.data.iplantcollaborative.org
 ```
 
 The `-P` flag lists public systems only, and the `-S` flag lists storage systems only.

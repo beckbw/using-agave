@@ -20,6 +20,7 @@ __Part 2: Intermediate CLI__
 * [Assumptions So Far](docs/assumptions_so_far.md)
 * [Importing Data from Other Systems or the Web](docs/importing_data.md)
 * [Sharing Data with Other Users](docs/sharing_data.md)
+* [Using Monitors to Track System Health](docs/using_monitors.md)
 
 __Part 3: Advanced Usage__
 * [Ex 1: Running the Drug Discovery Portal from the Command Line](docs/drug_discovery.md)
